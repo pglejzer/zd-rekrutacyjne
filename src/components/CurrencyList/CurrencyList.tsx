@@ -101,7 +101,7 @@ const CurrencyList: React.FC = () => {
                   {filteredCurrencies.map(({ code, currency, mid }, index) => (
                     <tr
                       key={code}
-                      className={`${styles.link} ${!showMore && index >= 10 ? styles.hiddenRow : ''}`}
+                      className={`${!showMore && index >= 10 ? styles.hiddenRow : ''}`}
                       onClick={() => navigate(`/currency/${code}`)}>
                       <td>{currency}</td>
                       <td>{code}</td>

@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { getCurrencyRates } from '../../services/api';
+import { Currency } from '../../services/api.types';
 import styles from './CurrencyConverter.module.css';
 
-interface Currency {
-  code: string;
-  currency: string;
-  mid: number;
-}
+type TCurrency = Omit<Currency, 'effectiveDay'>;
 
 const CurrencyConverter: React.FC = () => {
-  const [currencies, setCurrencies] = useState<Currency[]>([]);
+  const [currencies, setCurrencies] = useState<TCurrency[]>([]);
   const [selectedCurrency, setSelectedCurrency] = useState('THB');
   const [amount, setAmount] = useState(1);
   const [converted, setConverted] = useState(0);
@@ -48,7 +45,7 @@ const CurrencyConverter: React.FC = () => {
   useEffect(() => {
     handleConversion();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isPLNtoCurrency, selectedCurrency, amount, currencies]);
+  }, [isPLNtoCurrency, selectedCurrency, currencies]);
 
   return (
     <div className={styles.currencyConverterContainer}>
