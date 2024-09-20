@@ -111,10 +111,6 @@
 }
 
 @media (max-width: 950px) {
-  .currencyListContainer {
-    width: 95%;
-  }
-
   .currencyListTable th,
   .currencyListTable td {
     font-size: 14px;

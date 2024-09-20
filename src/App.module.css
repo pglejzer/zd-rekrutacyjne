@@ -53,6 +53,8 @@
   }
 
   @media (max-width: 480px) {
+    padding: 8px;
+
     .nav ul {
       flex-direction: column;
 
