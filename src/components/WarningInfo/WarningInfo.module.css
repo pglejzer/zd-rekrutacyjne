@@ -1,0 +1,9 @@
+.warningInfo {
+  background-color: var(--warning-inf-bg);
+  color: var(--warning-info);
+  padding: 2px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin: 8px 0;
+  display: inline-block;
+}

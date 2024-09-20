@@ -1,0 +1,71 @@
+.appContainer {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .nav {
+    display: flex;
+    justify-content: center;
+    background-color: var(--light-gray-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 24px;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      li {
+        flex: 1;
+        text-align: center;
+
+        .navLink {
+          display: block;
+          padding: 12px 16px;
+          color: var(--blue-color);
+          background-color: transparent;
+          text-decoration: none;
+          font-weight: 500;
+          border-radius: 4px;
+          transition:
+            background-color 0.3s ease,
+            color 0.3s ease;
+
+          &:hover {
+            background-color: var(--navlink-hover);
+            color: var(--blue-color);
+          }
+        }
+
+        .activeNavLink {
+          background-color: var(--blue-color);
+          color: white;
+          cursor: default;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .nav ul {
+      flex-direction: column;
+
+      width: 100%;
+    }
+
+    .nav li {
+      flex: unset;
+    }
+
+    .navLink {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+}

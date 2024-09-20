@@ -1,0 +1,165 @@
+.currencyListContainer {
+  padding: 24px;
+  background-color: var(--very-light-gray-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  .currencyListTable {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+      position: sticky;
+      top: 0;
+    }
+
+    th,
+    td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid var(--border-gray-color);
+    }
+
+    th {
+      background-color: var(--light-gray-color);
+      font-weight: 600;
+    }
+
+    tr:hover {
+      cursor: pointer;
+      background-color: var(--list-elment-hover);
+    }
+  }
+}
+
+.searchContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+
+  div {
+    margin: 0;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  .searchInput {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--blue-hover-color);
+    margin-right: 16px;
+
+    &:focus {
+      border-color: var(--blue-color);
+      outline: none;
+    }
+
+    @media (max-width: 950px) {
+      width: 100%;
+      max-width: 100%;
+      margin: 8px 0;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 14px;
+      padding: 6px;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 950px) {
+    flex-direction: column;
+
+    h1 {
+      font-size: 24px;
+    }
+  }
+}
+
+.noResultsMessage {
+  margin-top: 16px;
+  font-size: 16px;
+  color: var(--blue-hover-color);
+  text-align: center;
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+  }
+}
+
+.loading {
+  font-size: 18px;
+  color: var(--blue-color);
+  text-align: center;
+  padding: 24px;
+}
+
+@media (max-width: 950px) {
+  .currencyListContainer {
+    width: 95%;
+  }
+
+  .currencyListTable th,
+  .currencyListTable td {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .currencyListContainer {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .currencyListTable th,
+  .currencyListTable td {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
+.dateInput {
+  padding: 6px;
+  border: 1px solid var(--blue-hover-color);
+
+  &:focus {
+    border-color: var(--blue-color);
+    outline: none;
+  }
+}
+
+.showMoreButton {
+  width: 100%;
+  padding: 12px;
+  background-color: transparent;
+  color: var(--blue-color);
+  border: 1px solid var(--white-chart);
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 16px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.showMoreButton:hover {
+  background-color: rgba(24, 144, 255, 0.1);
+  color: var(--blue-hover-color);
+}
+
+.hiddenRow {
+  display: none;
+}
+
+.fadeEffect {
+  position: relative;
+  height: 40px;
+  background: linear-gradient(transparent, rgba(255, 255, 255, 0.9));
+  margin-top: -40px;
+  z-index: 1;
+}
