@@ -37,8 +37,8 @@ Currency Exchange App to aplikacja webowa stworzona do wyświetlania aktualnych 
 1. **Klonowanie repozytorium:**
 
    ```bash
-   git clone https://github.com/pglejzer/currency-exchange-app.git
-   cd currency-exchange-app
+   git clone https://github.com/pglejzer/zd-rekrutacyjne.git
+   cd zd-rekrutacyjne
    ```
 
 2. **Instalacja zależności:**
