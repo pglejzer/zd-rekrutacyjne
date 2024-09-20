@@ -77,7 +77,6 @@ Currency Exchange App to aplikacja webowa stworzona do wyświetlania aktualnych 
   - `/services`: Warstwa komunikacji z API.
   - `/utils`: Funkcje pomocnicze, takie jak przetwarzanie dat.
   - `/tests`: Testy jednostkowe komponentów i logiki aplikacji.
-  - `/assets`: Zasoby statyczne, takie jak obrazy, ikony itp.
 
 ## Kluczowe komponenty
 
