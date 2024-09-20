@@ -42,7 +42,6 @@ export const getCurrencyRates = async (date?: string): Promise<CurrencyRatesResp
 export const getCurrencyHistory = async (code: string, startDate: string, endDate: string): Promise<CurrencyRate> => {
   try {
     const response = await fetch(`${API_BASE_URL}/rates/A/${code}/${startDate}/${endDate}/?format=json`);
-    console.log(response);
 
     if (response.status === 404 || response.status === 400) {
       return {
