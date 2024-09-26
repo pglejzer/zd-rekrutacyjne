@@ -28,7 +28,7 @@
 
     .dateSelecorStartLabel {
       &:nth-child(1) {
-        margin-bottom: 8px;
+        margin-bottom: 7px;
       }
     }
 
@@ -40,7 +40,16 @@
       justify-content: space-between;
       flex-wrap: wrap;
 
-      @media (max-width: 320px) {
+      input {
+        border: 1px solid var(--blue-color);
+        border-radius: 3px;
+      }
+
+      @media (max-width: 425px) {
+        input {
+          max-width: 125px;
+        }
+
         display: flex;
         flex-direction: column;
 
